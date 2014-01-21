@@ -6,109 +6,148 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>State Based Systems by the NAIC</title>
+        <meta name="description" content="SBS is a comprehensive, Web-based application for use by state regulators in support of insurance regulatory functions. ">
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body>
+    <body class="page-dashboard" data-responsejs='{
+    "create": [
+        { "prop":"width", "prefix": "min-width-", "lazy":true },
+        { "prop":"width", "prefix":"src", "lazy":true }
+    ]}'>
         <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+        
+        <!-- BEGIN CONTENT -->
+
+        <div class="sheet-site">
+            
+            <div class="nav-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-default navbar-primary" role="navigation">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <button type="button" class="btn btn-default navbar-btn pull-right navbar-login"><span class="glyphicon glyphicon-user"></span>Login</button>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle navbar-btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="glyphicon glyphicon glyphicon-list"></span>
+                                <span class="sr-only">Toggle navigation</span>
+                                Menu
+                            </button>
+                            <img class="brand-img" src="img/SBS_Logo_noTag.png" data-min-width-481="img/SBS_Logo_wTag.png" alt="SBS Logo">
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">Link</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </nav>
+                </div><!-- /.container -->
+            </div><!-- /.nav-wrapper -->
+            <div class="nav-wrapper nav-subnav nav-l2">
+                <div class="container">
+                    <div>First Level Subnavigation</div>
+                </div><!-- /.container -->
+            </div><!-- end /.nav-wrapper -->
+            <div class="nav-wrapper nav-subnav nav-l3">
+                <div class="container">
+                    <div>Second Level Subnavigation</div>
+                </div><!-- /.container -->
+            </div><!-- end /.nav-wrapper -->
+            <div class="nav-wrapper nav-subnav nav-l4">
+                <div class="container">
+                    <div>Third Level Subnavigation</div>
+                </div><!-- /.container -->
+            </div><!-- end /.nav-wrapper -->
+            <a class="nav-wrapper nav-subnav nav-close" href="#">
+                <div class="container text-center">X Close Menu</div><!-- /.container -->
+            </a><!-- end /.nav-wrapper -->
+
+        <div class="jumbotron">
+          <div class="container">
+            <h1>Simplifying Insurance Regulation</h1>
+            <p>SBS supports state regulators with insurance regulatory functions</p>
+            <a class="btn btn-default btn-lg">Login to Application</a>
+          </div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+
+        <nav class="navbar navbar-secondary" role="navigation">
+          <div class="navbar-collapse container" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Separated link</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <div class="newsTicker container clearfix">
+          <div class="row">
+            <span class="news-header col-xs-12 col-md-2">RECENT NEWS</span>
+            <div class="news-articleWrap col-xs-12 col-sm-9 col-md-8">
+              <a class="news-article" href="#" target="_blank">Organization Celebrates 10 Year Anniversary</a>
+              <a class="news-article" href="#" target="_blank">Some other awesome news!</a>
+              <a class="news-article" href="#" target="_blank">Pretty Cool huh?</a>
             </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
+            <div class="newsController col-xs-12 col-sm-3 col-md-2">
+              <button type="button" class="btn">
+                <span class="news-pause glyphicon glyphicon-pause"></span>
+              </button>
+              <button type="button" class="btn">
+                <span class="news-prev glyphicon glyphicon-chevron-left"></span>
+              </button>
+              <button type="button" class="btn">
+                <span class="news-next glyphicon glyphicon-chevron-right"></span>
+              </button>
+            </div><!-- /.newsController -->
+          </div><!-- /.row -->
+        </div><!-- /.newsTicker -->
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        </div><!-- /.sheet-site -->
+        
+        <!-- END CONTENT -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-
+    
         <script src="js/vendor/bootstrap.min.js"></script>
-
+        <script src="js/vendor/response.min.js"></script>
+    
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
+    
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

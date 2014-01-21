@@ -1,22 +1,194 @@
+/*!
+ *
+ *	SOLAR Styling
+ * 	Initially created by Coty Beasley @beacrea
+ *	Email: cdbeasley@naic.org
+ * 
+ * -------------------------------------------
+ * 
+ *  TABLE OF CONTENTS
+ *
+ * -------------------------------------------
+ *
+ *	$_VARIABLES
+ *		- Colors
+ *      - Fonts
+ *
+ *	$_GlOBAL STYLES
+ *		- Body
+ *      - Content-Bounding
+ *      - Navigation
+ *
+ *	$_TYPOGRAPHY
+ *		- Defaults
+ *
+ *  $JUMBOTRON
+ *    - Main Styles
+ *
+ *  $CONTENT COMPONENTS
+ *    - News Ticker
+ *
+ */
+/*
+ * -------------------------------------------
+ *	$_VARIABLES
+ *  
+ *  These are global SASS variables used
+ *  throughout the entire stylesheet.
+ * -------------------------------------------
+ */
+/*
+ * -------------------------------------------
+ *	$_GLOBAL STYLES
+ *  
+ *  Repeatable styles for the whole site.
+ * -------------------------------------------
+ */
+body {
+  font: 16px arial, Helvetica, sans-serif;
+  color: #0a0a0a;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  background: #f0f0f0; }
 
+.embed-nav ul {
+  display: none !important; }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.sheet-site {
+  min-width: 318px; }
 
+.nav-wrapper {
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  width: 100%; }
 
+.navbar {
+  margin-bottom: 0;
+  padding-top: 0.1em;
+  border-radius: 0 !important; }
+  .navbar button {
+    background: white; }
+  .navbar .glyphicon-user, .navbar .glyphicon-list {
+    margin-right: 0.33em; }
+  .navbar .navbar-login {
+    margin-left: 0.5em; }
 
+.navbar-secondary {
+  background: #0a0a0a;
+  color: white; }
 
+.navbar-nav.navbar-right:last-child, .navbar-collapse .navbar-nav.navbar-right:last-child {
+  margin-right: 0; }
 
+.navbar-toggle {
+  margin-right: 0;
+  padding: 6px 12px;
+  font-size: 14px;
+  background: #fff;
+  line-height: 1.428571429;
+  border: 1px solid #ccc !important; }
 
+.navbar-default {
+  background: transparent;
+  border: 0; }
 
+.brand-img {
+  height: 3.32em;
+  padding: 12px 0; }
 
+.nav-subnav {
+  padding: 0.25em 0; }
 
+.nav-close {
+  background: #000;
+  color: #fff;
+  padding: 1em 0;
+  display: block; }
+  .nav-close:hover {
+    text-decoration: none;
+    color: #0a0a0a;
+    margin: 0 auto;
+    display: block; }
 
+.nav-l2, .nav-l3, .nav-l4, .nav-close {
+  color: white;
+  display: none; }
 
+.nav-l2 {
+  background: #999; }
 
+.nav-l3 {
+  background: #666; }
 
+.nav-l4 {
+  background: #333; }
 
+/*
+ * -------------------------------------------
+ *	$_TYPOGRAPHY
+ * -------------------------------------------
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: arial, Helvetica, sans-serif; }
 
+/*
+ * -------------------------------------------
+ *  $_JUMBOTRON
+ * -------------------------------------------
+ */
+.jumbotron {
+  background: url("../img/hero-dft.jpg") center top no-repeat;
+  color: white;
+  margin-bottom: 0;
+  padding-top: 5em;
+  padding-bottom: 4em; }
+  .jumbotron .btn {
+    clear: both;
+    color: #007cc2; }
 
-
+@media (min-width: 0px) {
+  .jumbotron {
+    text-align: center;
+    background: url("../img/hero-xs.jpg") center top no-repeat; } }
+@media (min-width: 480px) {
+  .jumbotron {
+    background: url("../img/hero-sm.jpg") left top no-repeat; } }
+@media (min-width: 768px) {
+  .jumbotron {
+    text-align: left;
+    background: url("../img/hero-tb.jpg") left top no-repeat; } }
+@media (min-width: 1200px) {
+  .jumbotron {
+    background: url("../img/hero-dk.jpg") left top no-repeat; } }
+/*
+ * -------------------------------------------
+ *  $_CONTENT COMPONENTS
+ *  
+ *  Repeatable styles for the whole site.
+ * -------------------------------------------
+ */
+.newsTicker {
+  margin-top: 1em;
+  background: #ddd;
+  line-height: 200%; }
+  .newsTicker .news-header, .newsTicker .newsController {
+    display: inline-block;
+    background: #000;
+    color: #fff; }
+  .newsTicker .news-articleWrap {
+    float: left; }
+  .newsTicker .news-header {
+    padding-bottom: 1px;
+    text-align: left;
+    font-size: 1em; }
+  .newsTicker .newsController {
+    text-align: center; }
+    .newsTicker .newsController button {
+      color: #fff;
+      background: #000;
+      border: 0;
+      height: auto;
+      padding: 0.25em 0.5em; }
+      .newsTicker .newsController button:hover {
+        background: #ccc; }
