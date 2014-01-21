@@ -48,10 +48,11 @@ $color-siteBkg: rgb(240,240,240);
 $color-primaryDark: rgb(10,10,10);
 $color-primaryLight: rgb(255,255,255);
 $color-red: rgb(200, 30, 40);
-$color-blue: rgb(0, 124, 194);
+$color-blue: rgb(15, 100, 150);
+$color-blue-dark: rgb(21,53,74);
 
 // Fonts
-$font-stack: arial, Helvetica, sans-serif;
+$font-stack: Georgia, Helvetica, sans-serif;
 
 
 
@@ -77,14 +78,17 @@ body {
     background: $color-siteBkg;
 }
 
-// Test Styles
-.embed-nav ul { display: none !important; }
-
 // Site-Bounding
 .sheet-site { min-width: 318px; }
 
 // Navigation
-.nav-wrapper { background: $color-primaryLight; background: rgba(255,255,255,0.9); position: absolute; width: 100%; }
+.nav-wrapper { 
+  background: $color-primaryLight;
+  background: rgba(255,255,255,0.9);
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
 .navbar { 
   margin-bottom: 0;
   padding-top: 0.1em;
@@ -129,6 +133,10 @@ body {
 .nav-l3 { background: #666; }
 .nav-l4 { background: #333; }
 
+// Buttons
+
+.btn { border-radius: 0 !important; }
+
 
 
 
@@ -158,10 +166,15 @@ h1, h2, h3, h4, h5, h6 {
 .jumbotron {    
     background: url('../img/hero-dft.jpg') center top no-repeat;
     //background-size: cover;
-    color: $color-primaryLight;
+    color: $color-blue-dark;
+    text-shadow: 1px 1px 1px #ddd;
     margin-bottom: 0;
     padding-top: 5em;
     padding-bottom: 4em;
+    h1 {
+      font-weight: 600;
+    }
+    border-bottom: 1px solid #ccc;
     .btn {
         clear: both;
         color: $color-blue;
@@ -190,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1200px) {
     .jumbotron {
-        background: url('../img/hero-dk.jpg') left top no-repeat;
+        background: url('../img/hero-dk2.png') center top no-repeat;
     }
 }
 
@@ -210,16 +223,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .newsTicker {
   margin-top: 1em;
-  background: #ddd;
   line-height: 200%;
+  border: 1px solid $color-blue-dark;
+  border-left: 0;
+  border-right: 0;
   .news-header,.newsController { 
     display: inline-block;
-    background: #000;
+    background: $color-blue-dark;
     color: #fff;
   }
-  .news-articleWrap { float:left; }
+  .news-articleWrap {
+    border: 1px solid $color-blue-dark;
+    border-top: 0;
+    border-bottom: 0;
+  }
   .news-header {
-    padding-bottom: 1px;
     text-align: left;
     font-size: 1em;
   }
@@ -227,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     button { 
       color: #fff;
-      background: #000;
+      background: $color-blue-dark;
       border: 0;
       height: auto;
       padding: 0.25em 0.5em;
@@ -236,4 +254,8 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+}
+
+@media (max-width: 768px) {
+  .newsTicker { margin: 1em 15px 0; }
 }

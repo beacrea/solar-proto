@@ -31,9 +31,9 @@ var ticker = $('.news-articleWrap');
 ticker.children(':first').show().siblings().hide();
 
 setInterval(function() {
-    ticker.find(':visible').fadeOut(1000, function() {
+    ticker.find(':visible').fadeOut(400, function() {
         $(this).appendTo(ticker);
-        ticker.children(':first').fadeIn(1000);
+        ticker.children(':first').fadeIn(800);
     });
-},5000);
+},4500);
 
