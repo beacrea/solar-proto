@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../img/hero-tb.jpg") left top no-repeat; } }
 @media (min-width: 1200px) {
   .jumbotron {
-    background: url("../img/hero-dk2.png") center top no-repeat; } }
+    background: url("../img/hero-dk.png") center top no-repeat; } }
 /*
  * -------------------------------------------
  *  $_CONTENT COMPONENTS
