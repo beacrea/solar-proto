@@ -11,22 +11,24 @@
  * -------------------------------------------
  *
  *	$_VARIABLES
- *		- Colors
+ *		  - Colors
  *      - Fonts
  *
  *	$_GlOBAL STYLES
- *		- Body
+ *		  - Body
  *      - Content-Bounding
  *      - Navigation
+ *      - Buttons
+ *      - Footer
  *
  *	$_TYPOGRAPHY
- *		- Defaults
+ *		  - Defaults
  *
  *  $JUMBOTRON
- *    - Main Styles
+ *      - Main Styles
  *
  *  $CONTENT COMPONENTS
- *    - News Ticker
+ *      - News Ticker
  *
  */
 /*
@@ -52,7 +54,8 @@ body {
   background: #f0f0f0; }
 
 .sheet-site {
-  min-width: 318px; }
+  min-width: 318px;
+  margin-bottom: 2em; }
 
 .nav-wrapper {
   background: white;
@@ -125,6 +128,56 @@ body {
 .btn {
   border-radius: 0 !important; }
 
+.footerCap {
+  background: #eee;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-top: 6px solid #0f6496; }
+  .footerCap .copyright {
+    float: left; }
+    .footerCap .copyright p {
+      margin: 0;
+      color: #666;
+      font-size: 0.75em; }
+      .footerCap .copyright p:first-child {
+        margin-bottom: 0.5em; }
+  .footerCap .socialLinks {
+    float: right;
+    text-align: right;
+    margin-top: 0.25em; }
+    .footerCap .socialLinks img {
+      width: 2em;
+      height: auto;
+      margin-left: 0.25em; }
+  .footerCap .globalLinks {
+    clear: both;
+    border-top: 1px solid #ccc;
+    margin-top: 3em !important;
+    padding-top: 0.5em; }
+    .footerCap .globalLinks a, .footerCap .globalLinks span {
+      margin-right: 0.25em; }
+    .footerCap .globalLinks a {
+      font-size: 0.9em; }
+
+@media (max-width: 500px) {
+  .footerCap {
+    padding-bottom: 1em; }
+    .footerCap .copyright, .footerCap .socialLinks {
+      display: block;
+      float: none;
+      text-align: center;
+      margin-top: 1em; }
+    .footerCap .socialLinks img {
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      width: 2.5em;
+      height: auto; }
+    .footerCap .globalLinks {
+      margin-top: 0.5em !important;
+      padding-top: 0.5em;
+      text-align: center; }
+      .footerCap .globalLinks a, .footerCap .globalLinks span {
+        margin: 0 0.25em; } }
 /*
  * -------------------------------------------
  *	$_TYPOGRAPHY
@@ -176,20 +229,22 @@ h1, h2, h3, h4, h5, h6 {
 .newsTicker {
   margin-top: 1em;
   line-height: 200%;
-  border: 1px solid #15354a;
   border-left: 0;
   border-right: 0; }
   .newsTicker .news-header, .newsTicker .newsController {
     display: inline-block;
     background: #15354a;
+    border: 1px solid #15354a;
+    border-left: 0;
+    border-right: 0;
     color: #fff; }
   .newsTicker .news-articleWrap {
-    border: 1px solid #15354a;
-    border-top: 0;
-    border-bottom: 0; }
+    border: 1px solid #15354a; }
   .newsTicker .news-header {
     text-align: left;
     font-size: 1em; }
+  .newsTicker .row {
+    padding: 0 15px; }
   .newsTicker .newsController {
     text-align: center; }
     .newsTicker .newsController button {
