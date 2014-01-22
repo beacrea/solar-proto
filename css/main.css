@@ -230,8 +230,10 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../img/hero-sm.jpg") left top no-repeat; } }
 @media (min-width: 768px) {
   .jumbotron {
-    text-align: left;
     background: url("../img/hero-tb.jpg") left top no-repeat; } }
+@media (min-width: 960px) {
+  .jumbotron {
+    text-align: left; } }
 @media (min-width: 1200px) {
   .jumbotron {
     background: url("../img/hero-dk.png") center top no-repeat; } }
@@ -272,6 +274,11 @@ h1, h2, h3, h4, h5, h6 {
       .newsTicker .newsController button:hover {
         background: #ccc; }
 
+@media (max-width: 600px) {
+  .news-articleWrap a {
+    display: block;
+    line-height: 120%;
+    padding: 0.75em 0; } }
 /*
  * -------------------------------------------
  *  $_$PAGE SPECIFIC
