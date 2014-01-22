@@ -33,6 +33,9 @@
  *
  *  $PAGE SPECIFIC
  *    - Landing Page
+ *  
+ *  $_HELPERS / PLUGINS
+ *    - modals
  *
  */
 /*
@@ -288,28 +291,62 @@ h1, h2, h3, h4, h5, h6 {
  */
 .page-lander .page-content .container {
   margin-bottom: 1.5em; }
-.page-lander .qTools .row {
+.page-lander .qTools-list .row {
   margin-top: 1em; }
-.page-lander .qTools a {
+.page-lander .qTools-list a {
   display: inline-block;
   margin-bottom: 1em;
   margin-right: 1.5em;
   font-size: 1.2em; }
-  .page-lander .qTools a span {
+  .page-lander .qTools-list a span {
     margin-right: 0.5em; }
 
 @media (max-width: 1200px) {
-  .page-lander .qTools a {
+  .page-lander .qTools-list a {
     margin-right: 0; } }
 @media (max-width: 1024px) {
-  .page-lander .qTools a {
+  .page-lander .qTools-list a {
     margin-right: 1em; } }
 @media (max-width: 768px) {
   .page-lander h1 {
     text-align: center; }
-  .page-lander .qTools a {
+  .page-lander .qTools-list a {
     text-align: center;
     display: block;
     padding: 0.25em;
+    margin-right: 0;
     border: 1px solid #15354a;
     background: #eee; } }
+.qTools-miniApp {
+  background: url(../img/SBS_Logo-tile-light.png) white center center fixed;
+  border-top: 4px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10em 0; }
+
+@media (max-width: 800px) {
+  .qTools-miniApp {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; } }
+/*
+ * -------------------------------------------
+ *  $_HELPERS / PLUGINS
+ * -------------------------------------------
+ */
+/* Modal Styles */
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0px; }
+
+body.modal-open {
+  overflow: hidden; }
+
+.modal {
+  overflow-y: auto; }
+  .modal .modal-body span {
+    display: block; }
+  .modal .dataTitle {
+    font-weight: bold; }
+  .modal p {
+    margin-bottom: 1em; }

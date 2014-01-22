@@ -33,6 +33,9 @@
  *
  *  $PAGE SPECIFIC
  *    - Landing Page
+ *  
+ *  $_HELPERS / PLUGINS
+ *    - modals
  *
  */
 
@@ -386,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 1.5em;
     }
   }
-  .qTools {
+  .qTools-list {
     .row { margin-top: 1em; }
     a { 
       display: inline-block;
@@ -401,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1200px) {
   .page-lander {
-    .qTools {
+    .qTools-list {
       a { 
         margin-right: 0;
       }
@@ -410,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1024px) {
   .page-lander {
-    .qTools {
+    .qTools-list {
       a { 
         margin-right: 1em;
       }
@@ -420,14 +423,64 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .page-lander {
     h1 { text-align: center; }
-    .qTools {
+    .qTools-list {
       a { 
         text-align: center;
         display: block;
         padding: 0.25em;
+        margin-right: 0;
         border: 1px solid $color-blue-dark;
         background: #eee;
       }
     }
   }
+}
+.qTools-miniApp {
+  background: url(../img/SBS_Logo-tile-light.png) #fff center center fixed;
+  border-top: 4px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10em 0;
+}
+@media (max-width:800px) {
+  .qTools-miniApp {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
+
+
+
+
+
+/*
+ * -------------------------------------------
+ *  $_HELPERS / PLUGINS
+ * -------------------------------------------
+ */
+
+
+/* Modal Styles */
+
+body.modal-open, 
+.modal-open .navbar-fixed-top, 
+.modal-open .navbar-fixed-bottom {
+    margin-right: 0px;
+}
+body.modal-open {
+    overflow: hidden;
+}
+.modal {
+    overflow-y: auto;
+    .modal-body {
+        span {
+            display: block;
+        }       
+    }
+    .dataTitle {
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 1em;
+    }
 }
