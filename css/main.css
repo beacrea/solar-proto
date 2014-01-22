@@ -11,24 +11,28 @@
  * -------------------------------------------
  *
  *	$_VARIABLES
- *		  - Colors
- *      - Fonts
+ *		- Colors
+ *    - Fonts
  *
  *	$_GlOBAL STYLES
- *		  - Body
- *      - Content-Bounding
- *      - Navigation
- *      - Buttons
- *      - Footer
+ *    - Body
+ *    - Typography
+ *    - Content-Bounding
+ *    - Navigation
+ *    - Buttons
+ *    - Footer
  *
  *	$_TYPOGRAPHY
- *		  - Defaults
+ *		- Defaults
  *
  *  $JUMBOTRON
- *      - Main Styles
+ *    - Main Styles
  *
  *  $CONTENT COMPONENTS
- *      - News Ticker
+ *    - News Ticker
+ *
+ *  $PAGE SPECIFIC
+ *    - Landing Page
  *
  */
 /*
@@ -47,11 +51,13 @@
  * -------------------------------------------
  */
 body {
-  font: 16px Georgia, Helvetica, sans-serif;
-  color: #0a0a0a;
-  letter-spacing: 0.1em;
+  font: 16px Arial, Helvetica, sans-serif;
+  color: #646464;
   font-weight: 300;
   background: #f0f0f0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, sans-serif !important; }
 
 .sheet-site {
   min-width: 318px;
@@ -76,7 +82,7 @@ body {
     margin-left: 0.5em; }
 
 .navbar-secondary {
-  background: #0a0a0a;
+  background: #646464;
   color: white; }
 
 .navbar-nav.navbar-right:last-child, .navbar-collapse .navbar-nav.navbar-right:last-child {
@@ -108,7 +114,7 @@ body {
   display: block; }
   .nav-close:hover {
     text-decoration: none;
-    color: #0a0a0a;
+    color: #646464;
     margin: 0 auto;
     display: block; }
 
@@ -184,7 +190,7 @@ body {
  * -------------------------------------------
  */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 /*
  * -------------------------------------------
@@ -197,10 +203,11 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 1px 1px 1px #ddd;
   margin-bottom: 0;
   padding-top: 5em;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   border-bottom: 1px solid #ccc; }
   .jumbotron h1 {
-    font-weight: 600; }
+    font-weight: 600;
+    letter-spacing: 0.1em; }
   .jumbotron .btn {
     clear: both;
     color: #0f6496; }
@@ -256,6 +263,37 @@ h1, h2, h3, h4, h5, h6 {
       .newsTicker .newsController button:hover {
         background: #ccc; }
 
+/*
+ * -------------------------------------------
+ *  $_$PAGE SPECIFIC
+ *  
+ *  Styles that are unique to each page.
+ * -------------------------------------------
+ */
+.page-lander .page-content .container {
+  margin-bottom: 1.5em; }
+.page-lander .qTools .row {
+  margin-top: 1em; }
+.page-lander .qTools a {
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-right: 1.5em;
+  font-size: 1.2em; }
+  .page-lander .qTools a span {
+    margin-right: 0.5em; }
+
+@media (max-width: 1200px) {
+  .page-lander .qTools a {
+    margin-right: 0; } }
+@media (max-width: 1024px) {
+  .page-lander .qTools a {
+    margin-right: 1em; } }
 @media (max-width: 768px) {
-  .newsTicker {
-    margin: 1em 15px 0; } }
+  .page-lander h1 {
+    text-align: center; }
+  .page-lander .qTools a {
+    text-align: center;
+    display: block;
+    padding: 0.25em;
+    border: 1px solid #15354a;
+    background: #eee; } }
