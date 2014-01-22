@@ -123,8 +123,8 @@
                   <h1>Quick Tools</h1>
                   <div class="row">
                     <div class="col-xs-12 col-md-6">
-                      <a href="#"><span class="glyphicon glyphicon-info-sign"></span>State Info Lookup</a>
-                      <a href="#"><span class="glyphicon glyphicon-list-alt"></span>State Service List</a>
+                      <a href="#" class="qTool-trigger-stateInfo"><span class="glyphicon glyphicon-info-sign"></span>State Info Lookup</a>
+                      <a href="#" class="qTool-trigger-stateServices"><span class="glyphicon glyphicon-list-alt"></span>State Service List</a>
                       <a href="http://www.statebasedsystems.com/LicensePrint.htm"><span class="glyphicon glyphicon-print"></span>Print Your License</a>
                     </div><!-- /.col -->
                     <div class="col-xs-12 col-md-6">
@@ -140,7 +140,7 @@
             <div class="qTools-miniApp">
               <div class="container">
                 <div class="row">
-                  <div class="col-xs-12 licenseeLookup" style="text-align: center;">
+                  <div class="col-xs-12 qTool-app qTool-app-stateInfo" style="text-align: center;">
                     <h1>Licensee Lookup</h1>
                     <p>Use this tool to access licensee, company, and course information.</p>
                     <select class="form-control listofStates input-lg"></select>
@@ -150,8 +150,15 @@
                         <option>Companies</option>
                         <option>Courses</option>
                     </select>
-                    <button class="btn btn-default btn-lg">Click to Cancel</button>
-                    <button class="btn btn-default btn-lg">Search</button>
+                    <button class="btn btn-default btn-lg btn-cancel">Cancel</button>
+                    <button class="btn btn-default btn-lg btn-search">Search</button>
+                  </div><!-- /.col -->
+                  <div class="col-xs-12 qTool-app qTool-app-stateServices" style="text-align: center;">
+                    <h1>State Services</h1>
+                    <p>Select a State to see a full list of its available services.</p>
+                    <select class="form-control listofStates input-lg"></select>
+                    <button class="btn btn-default btn-lg btn-cancel">Cancel</button>
+                    <button class="btn btn-default btn-lg btn-search">Search</button>
                   </div><!-- /.col -->
                 </div><!-- /.row -->
               </div><!-- /.container -->

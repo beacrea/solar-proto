@@ -34,7 +34,8 @@
 // News Ticker
 
 var ticker = $('.news-articleWrap');
-ticker.children(':first').show().siblings().hide();
+ticker.children().hide();
+ticker.children(':first').show();
 
 setInterval(function() {
     ticker.find(':visible').fadeOut(400, function() {
@@ -346,14 +347,20 @@ var contactData = contactWrite(contactInfo, 3);
 $( ".listofStates" ).html(stateData);
 $( ".state-contact" ).html(contactData);
 
-$('.qTools-miniApp').hide();
-$('.qTools-list a').click(function() {
+$('.qTools-miniApp, .qTool-app').hide();
+$('.qTools-list a').click(function(event) {
+	$('.qTools-miniApp, .qTool-app').hide();
+	if($(event.target).is('.qTool-trigger-stateInfo')) {
+		$('.qTool-app-stateInfo').show();
+	} else if ($(event.target).is('.qTool-trigger-stateServices')) {
+		$('.qTool-app-stateServices').show();
+	}
 	$('.qTools-miniApp').slideDown();
 	$('html, body').animate({
 	        scrollTop: $(".qTools-miniApp").offset().top-80
 	    }, 600);
 });
-$('.qTools-miniApp .btn').click(function() {
+$('.qTools-miniApp .btn-cancel').click(function() {
 	$('.qTools-miniApp').slideUp();
 	$('html, body').animate({
 	        scrollTop: $(".qTools-list").offset().top-80

@@ -25,6 +25,9 @@
  *	$_TYPOGRAPHY
  *		- Defaults
  *
+ *  $_FORMS
+ *    - Defaults
+ *
  *  $JUMBOTRON
  *    - Main Styles
  *
@@ -35,7 +38,7 @@
  *    - Landing Page
  *  
  *  $_HELPERS / PLUGINS
- *    - modals
+ *    - Modals
  *
  */
 /*
@@ -206,6 +209,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /*
  * -------------------------------------------
+ *  $_FORMS
+ * -------------------------------------------
+ */
+.form-control {
+  margin-bottom: 0.75em; }
+
+/*
+ * -------------------------------------------
  *  $_JUMBOTRON
  * -------------------------------------------
  */
@@ -322,6 +333,10 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 4px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 4em 0; }
+  .qTools-miniApp .btn {
+    margin: 0 0.5em; }
+  .qTools-miniApp .licenseeLookup {
+    display: none; }
 
 @media (max-width: 800px) {
   .qTools-miniApp {
