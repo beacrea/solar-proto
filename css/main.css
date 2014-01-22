@@ -166,6 +166,8 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     text-align: right;
     margin-top: 0.25em; }
+    .footerCap .socialLinks a:hover {
+      text-decoration: none; }
     .footerCap .socialLinks img {
       width: 2em;
       height: auto;
@@ -192,7 +194,8 @@ h1, h2, h3, h4, h5, h6 {
       margin-left: 0.25em;
       margin-right: 0.25em;
       width: 2.5em;
-      height: auto; }
+      height: auto;
+      border: none !important; }
     .footerCap .globalLinks {
       margin-top: 0.5em !important;
       padding-top: 0.5em;

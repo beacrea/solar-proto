@@ -189,6 +189,9 @@ h1, h2, h3, h4, h5, h6 {
         float:right;
         text-align: right;
         margin-top: 0.25em;
+        a:hover {
+          text-decoration: none;
+        }
         img {
             width: 2em;
             height: auto;
@@ -221,11 +224,14 @@ h1, h2, h3, h4, h5, h6 {
             margin-top: 1em;
         }
         
-        .socialLinks img { 
-            margin-left: 0.25em;
-            margin-right: 0.25em;
-            width: 2.5em;
-            height: auto;
+        .socialLinks {
+            img { 
+              margin-left: 0.25em;
+              margin-right: 0.25em;
+              width: 2.5em;
+              height: auto;
+              border: none !important;
+            }
         }
         
         .globalLinks {
