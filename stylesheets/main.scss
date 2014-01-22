@@ -97,10 +97,13 @@ h1, h2, h3, h4, h5, h6 {
 // Navigation
 .nav-wrapper { 
   background: $color-primaryLight;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.8);
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #ddd;
+}
+@media (max-width: 800px) {
+  .nav-wrapper { background: rgba(255,255,255,0.95); }
 }
 .navbar { 
   margin-bottom: 0;
@@ -145,6 +148,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-l2 { background: #999; }
 .nav-l3 { background: #666; }
 .nav-l4 { background: #333; }
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+  color: $color-primaryLight;
+  background: $color-blue;
+}
 
 // Buttons
 .btn { border-radius: 0 !important; }

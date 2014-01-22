@@ -65,11 +65,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-wrapper {
   background: white;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   position: absolute;
   width: 100%;
   border-bottom: 1px solid #ddd; }
 
+@media (max-width: 800px) {
+  .nav-wrapper {
+    background: rgba(255, 255, 255, 0.95); } }
 .navbar {
   margin-bottom: 0;
   padding-top: 0.1em;
@@ -130,6 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-l4 {
   background: #333; }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: white;
+  background: #0f6496; }
 
 .btn {
   border-radius: 0 !important; }
