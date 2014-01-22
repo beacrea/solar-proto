@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   padding-top: 0.1em;
   border-radius: 0 !important;
-  button { background: $color-primaryLight; }
+  button, .btn { background: $color-primaryLight; }
   .glyphicon-user, .glyphicon-list { margin-right: 0.33em; }
   .navbar-login{ margin-left: 0.5em; }
 }
@@ -436,10 +436,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .qTools-miniApp {
-  background: url(../img/SBS_Logo-tile-light.png) #fff center center fixed;
+  background: url('../img/SBS_Logo-tile-light.png') #fff center center fixed;
   border-top: 4px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 10em 0;
+  padding: 4em 0;
 }
 @media (max-width:800px) {
   .qTools-miniApp {
