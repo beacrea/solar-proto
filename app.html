@@ -16,7 +16,7 @@
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
-    <body class="page-lander" data-responsejs='{
+    <body class="page-appMain" data-responsejs='{
     "create": [
         { "prop":"width", "prefix": "min-width-", "lazy":true },
         { "prop":"width", "prefix":"src", "lazy":true }
@@ -27,13 +27,17 @@
         
         <!-- BEGIN CONTENT -->
 
+        <div class="sidebar-left">
+          
+        </div><!-- /.sidebar-left -->
+
         <div class="sheet-site">
 
           <div class="nav-wrapper">
               <div class="container">
                   <nav class="navbar navbar-default navbar-primary" role="navigation">
                       <!-- Brand and toggle get grouped for better mobile display -->
-                      <button type="button" class="btn btn-default navbar-btn pull-right navbar-login"><span class="glyphicon glyphicon-user"></span>Login</button>
+                      <button type="button" class="btn btn-default navbar-btn pull-right navbar-login"><span class="glyphicon glyphicon-user"></span>Account</button>
                       <div class="navbar-header">
                           <button type="button" class="navbar-toggle navbar-btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                               <span class="glyphicon glyphicon glyphicon-list"></span>
@@ -63,92 +67,16 @@
 
           <div class="jumbotron">
             <div class="container">
-              <h1>Simplifying Insurance Regulation</h1>
-              <p>SBS supports state regulators with insurance regulatory functions</p>
-              <a class="btn btn-default btn-lg">Log into Application</a>
+              <p>You are currently operating within the state of <b>Missouri</b></p>
             </div>
           </div>
 
           <div class="page-content">
-            <div class="newsTicker container clearfix">
-              <div class="row">
-                <a class="news-header col-xs-12 col-md-2" href="http://www.statebasedsystems.com/news.htm" target="_blank">ALL NEWS</a>
-                <div class="news-articleWrap col-xs-12 col-sm-9 col-md-8">
-                  <a class="news-article" href="#" target="_blank">Arkansas Becomes 26th Member To Choose SBS</a>
-                  <a class="news-article" href="#" target="_blank">SBS Celebrates 10 Year Anniversary</a>
-                  <a class="news-article" href="#" target="_blank">Nebraska Brings SBS Online</a>
-                  <a class="news-article" href="#" target="_blank">Oregon Brings SBS Online</a>
-                </div>
-                <div class="newsController col-xs-12 col-sm-3 col-md-2">
-                  <button type="button" class="btn">
-                    <span class="news-pause glyphicon glyphicon-pause"></span>
-                  </button>
-                  <button type="button" class="btn">
-                    <span class="news-prev glyphicon glyphicon-chevron-left"></span>
-                  </button>
-                  <button type="button" class="btn">
-                    <span class="news-next glyphicon glyphicon-chevron-right"></span>
-                  </button>
-                </div><!-- /.newsController -->
-              </div><!-- /.row -->
-            </div><!-- /.newsTicker -->
 
-            <div class="container aboutSBS">
-              <div class="row">
-                <div class="col-xs-12 col-md-6">
-                  <h1>About State Based Systems</h1>
-                  <p>State Based Systems (SBS) is an electronic system owned by the National Association of Insurance Commissioners (NAIC) and enhanced in partnership with state insurance departments.</p>
-                  <p>Our goal for SBS is to enable your state insurance department to more efficiently and effectively process license applications, renewals, inquiries, complaints, enforcement actions, etc. with a minimum of effort and remain compliant with national uniformity initiatives.</p>
-                </div><!-- /.col -->
-                <div class="col-xs-12 col-md-6 qTools-list">
-                  <h1>Quick Tools</h1>
-                  <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                      <a href="#" class="qTool-trigger-stateInfo"><span class="glyphicon glyphicon-info-sign"></span>State Info Lookup</a>
-                      <a href="#" class="qTool-trigger-stateServices"><span class="glyphicon glyphicon-list-alt"></span>State Service List</a>
-                      <a href="http://www.statebasedsystems.com/LicensePrint.htm"><span class="glyphicon glyphicon-print"></span>Print Your License</a>
-                    </div><!-- /.col -->
-                    <div class="col-xs-12 col-md-6">
-                      <a href="http://www.statebasedsystems.com/EdTranscript.htm"><span class="glyphicon glyphicon-book"></span>Print Edu. Transcript</a>
-                      <a href="http://www.statebasedsystems.com/rgbenefits.htm"><span class="glyphicon glyphicon-file"></span>Generate a Report</a>
-                      <a href="http://www.statebasedsystems.com/EmailAddressMaintenance.htm"><span class="glyphicon glyphicon-envelope"></span>Update Email Address</a>
-                    </div><!-- /.col -->
-                  </div><!-- /.row -->
-                </div><!-- /.col -->
-              </div><!-- /.row -->
-            </div><!-- /.container -->
-
-            <div class="qTools-miniApp">
-              <div class="container">
-                <div class="row">
-                  <div class="col-xs-12 qTool-app qTool-app-stateInfo" style="text-align: center;">
-                    <h1>Licensee Lookup</h1>
-                    <p>Use this tool to access licensee, company, and course information.</p>
-                    <select class="form-control listofStates input-lg"></select>
-                    <select class="form-control input-lg">
-                        <option>Search for:</option>
-                        <option>Licensees</option>
-                        <option>Companies</option>
-                        <option>Courses</option>
-                    </select>
-                    <button class="btn btn-default btn-lg btn-cancel">Cancel</button>
-                    <button class="btn btn-default btn-lg btn-search">Search</button>
-                  </div><!-- /.col -->
-                  <div class="col-xs-12 qTool-app qTool-app-stateServices" style="text-align: center;">
-                    <h1>State Services</h1>
-                    <p>Select a State to see a full list of its available services.</p>
-                    <select class="form-control listofStates input-lg"></select>
-                    <button class="btn btn-default btn-lg btn-cancel">Cancel</button>
-                    <button class="btn btn-default btn-lg btn-search">Search</button>
-                  </div><!-- /.col -->
-                </div><!-- /.row -->
-              </div><!-- /.container -->
-            </div><!-- /.qTools-miniApp -->
+            
 
           </div><!-- /.page-content -->
-        </div><!-- /.sheet-site -->
-
-        <footer class="footerCap">
+          <footer class="footerCap">
           <div class="container">
             <div class="col-sm-6 col-md-8 socialLinks">
               <a href="http://twitter.com/NAIC_News" target="_blank">
@@ -172,6 +100,7 @@
             </div> <!-- /.globalLinks -->
           </div> <!-- /.container -->
         </footer> <!-- /.footerCap -->
+        </div><!-- /.sheet-site -->
 
         <div class="modal fade" id="appModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">

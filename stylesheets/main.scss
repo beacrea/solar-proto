@@ -13,6 +13,10 @@
  *	$_VARIABLES
  *		- Colors
  *    - Fonts
+ *    - Math
+ *
+ *  $_MIXINS
+ *    - Px -> EM Conversion
  *
  *	$_GlOBAL STYLES
  *    - Body
@@ -33,6 +37,9 @@
  *
  *  $CONTENT COMPONENTS
  *    - News Ticker
+ *
+ *  $_APPLICATION MAIN
+ *    - Baseline
  *
  *  $PAGE SPECIFIC
  *    - Landing Page
@@ -66,6 +73,26 @@ $color-blue-dark: rgb(21,53,74);
 // Fonts
 $font-stack: Arial, Helvetica, sans-serif;
 
+// Math
+$browser-context: 16;
+
+
+
+
+
+/*
+ * -------------------------------------------
+ *  $_MIXINS
+ *  
+ *  These are essentially SASS formulas.
+ * -------------------------------------------
+ */
+
+// Px -> EM Conversion
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
 
 
 
@@ -96,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Site-Bounding
 .sheet-site {
-  min-width: 318px;
+  min-width: em(318); 
   margin-bottom: 2em;
 }
 
@@ -108,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   border-bottom: 1px solid #ddd;
 }
-@media (max-width: 800px) {
+@media (max-width: em(800)) { 
   .nav-wrapper { background: rgba(255,255,255,0.95); }
 }
 .navbar { 
@@ -147,6 +174,8 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 }
+
+// Remove for Production, Now Deprecated
 .nav-l2, .nav-l3, .nav-l4, .nav-close { 
   color: $color-primaryLight; 
   display: none;
@@ -213,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: em(500)) {
     .footerCap {
         padding-bottom: 1em;
         
@@ -306,32 +335,32 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@media (min-width: 0px) {
+@media (min-width: 0) {
     .jumbotron {  
         text-align: center;
         background: url('../img/hero-xs.jpg') center top no-repeat;
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: em(480)) {
     .jumbotron {
         background: url('../img/hero-sm.jpg') left top no-repeat;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: em(768)) {
     .jumbotron {
         background: url('../img/hero-tb.jpg') left top no-repeat;
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: em(960)) {
     .jumbotron {
         text-align: left;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: em(1200)) {
     .jumbotron {
         background: url('../img/hero-dk.png') center top no-repeat;
     }
@@ -387,7 +416,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: em(600)) {
   .news-articleWrap a {
     display: block;
     line-height: 120%;
@@ -401,7 +430,58 @@ h1, h2, h3, h4, h5, h6 {
 
 /*
  * -------------------------------------------
- *  $_$PAGE SPECIFIC
+ *  $_APPLICATION MAIN
+ *  
+ *  Styles that are unique to each page.
+ * -------------------------------------------
+ */
+
+// Baseline
+.page-appMain {
+
+  // Global Tweaks
+  background-color: $color-blue-dark;
+  .sheet-site {
+    margin-bottom: 0;
+    float: right;
+  }
+
+  // Navigation
+  .nav-wrapper {
+    position: relative;
+    background-color: $color-primaryLight;
+  }
+
+  // Sidebars
+  .sidebar-left {
+    width: 200px;
+    float: left;
+  }
+
+  // Jumbotron
+  .jumbotron {
+    padding: 0.25em 0;
+    background-position: center;
+    p { 
+      font-size: 0.75em; 
+      margin-bottom: 0;
+    }
+  }
+
+  // Main Content
+  .page-content {
+    height: 20em;
+    background:  $color-primaryLight;
+  }
+}
+
+
+
+
+
+/*
+ * -------------------------------------------
+ *  $_PAGE SPECIFIC
  *  
  *  Styles that are unique to each page.
  * -------------------------------------------
@@ -427,7 +507,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: em(1200)) {
   .page-lander {
     .qTools-list {
       a { 
@@ -436,7 +516,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: em(1024)) {
   .page-lander {
     .qTools-list {
       a { 
@@ -445,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: em(768)) {
   .page-lander {
     h1 { text-align: center; }
     .qTools-list {
@@ -472,7 +552,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
-@media (max-width:800px) {
+@media (max-width: em(960)) {
   .qTools-miniApp {
     background-size: cover;
     background-position: center;

@@ -13,6 +13,10 @@
  *	$_VARIABLES
  *		- Colors
  *    - Fonts
+ *    - Math
+ *
+ *  $_MIXINS
+ *    - Px -> EM Conversion
  *
  *	$_GlOBAL STYLES
  *    - Body
@@ -34,6 +38,9 @@
  *  $CONTENT COMPONENTS
  *    - News Ticker
  *
+ *  $_APPLICATION MAIN
+ *    - Baseline
+ *
  *  $PAGE SPECIFIC
  *    - Landing Page
  *  
@@ -47,6 +54,13 @@
  *  
  *  These are global SASS variables used
  *  throughout the entire stylesheet.
+ * -------------------------------------------
+ */
+/*
+ * -------------------------------------------
+ *  $_MIXINS
+ *  
+ *  These are essentially SASS formulas.
  * -------------------------------------------
  */
 /*
@@ -66,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, sans-serif !important; }
 
 .sheet-site {
-  min-width: 318px;
+  min-width: 19.875em;
   margin-bottom: 2em; }
 
 .nav-wrapper {
@@ -76,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   border-bottom: 1px solid #ddd; }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
   .nav-wrapper {
     background: rgba(255, 255, 255, 0.95); } }
 .navbar {
@@ -182,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     .footerCap .globalLinks a {
       font-size: 0.9em; }
 
-@media (max-width: 500px) {
+@media (max-width: 31.25em) {
   .footerCap {
     padding-bottom: 1em; }
     .footerCap .copyright, .footerCap .socialLinks {
@@ -238,20 +252,20 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
     color: #0f6496; }
 
-@media (min-width: 0px) {
+@media (min-width: 0) {
   .jumbotron {
     text-align: center;
     background: url("../img/hero-xs.jpg") center top no-repeat; } }
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .jumbotron {
     background: url("../img/hero-sm.jpg") left top no-repeat; } }
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   .jumbotron {
     background: url("../img/hero-tb.jpg") left top no-repeat; } }
-@media (min-width: 960px) {
+@media (min-width: 60em) {
   .jumbotron {
     text-align: left; } }
-@media (min-width: 1200px) {
+@media (min-width: 75em) {
   .jumbotron {
     background: url("../img/hero-dk.png") center top no-repeat; } }
 /*
@@ -291,14 +305,42 @@ h1, h2, h3, h4, h5, h6 {
       .newsTicker .newsController button:hover {
         background: #ccc; }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   .news-articleWrap a {
     display: block;
     line-height: 120%;
     padding: 0.75em 0; } }
 /*
  * -------------------------------------------
- *  $_$PAGE SPECIFIC
+ *  $_APPLICATION MAIN
+ *  
+ *  Styles that are unique to each page.
+ * -------------------------------------------
+ */
+.page-appMain {
+  background-color: #15354a; }
+  .page-appMain .sheet-site {
+    margin-bottom: 0;
+    float: right; }
+  .page-appMain .nav-wrapper {
+    position: relative;
+    background-color: white; }
+  .page-appMain .sidebar-left {
+    width: 200px;
+    float: left; }
+  .page-appMain .jumbotron {
+    padding: 0.25em 0;
+    background-position: center; }
+    .page-appMain .jumbotron p {
+      font-size: 0.75em;
+      margin-bottom: 0; }
+  .page-appMain .page-content {
+    height: 20em;
+    background: white; }
+
+/*
+ * -------------------------------------------
+ *  $_PAGE SPECIFIC
  *  
  *  Styles that are unique to each page.
  * -------------------------------------------
@@ -315,13 +357,13 @@ h1, h2, h3, h4, h5, h6 {
   .page-lander .qTools-list a span {
     margin-right: 0.5em; }
 
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
   .page-lander .qTools-list a {
     margin-right: 0; } }
-@media (max-width: 1024px) {
+@media (max-width: 64em) {
   .page-lander .qTools-list a {
     margin-right: 1em; } }
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .page-lander h1 {
     text-align: center; }
   .page-lander .qTools-list a {
@@ -341,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
   .qTools-miniApp .licenseeLookup {
     display: none; }
 
-@media (max-width: 800px) {
+@media (max-width: 60em) {
   .qTools-miniApp {
     background-size: cover;
     background-position: center;
