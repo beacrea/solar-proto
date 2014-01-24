@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
  * -------------------------------------------
  */
 
-.jumbotron {    
+.jumbotron, .nav-auxBar {    
     background: url('../img/hero-dft.jpg') center top no-repeat;
     //background-size: cover;
     color: $color-blue-dark;
@@ -348,33 +348,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 0) {
-    .jumbotron {  
+    .jumbotron, .nav-auxBar {  
         text-align: center;
         background: url('../img/hero-xs.jpg') center top no-repeat;
     }
 }
 
 @media (min-width: em(480)) {
-    .jumbotron {
+    .jumbotron, .nav-auxBar {
         background: url('../img/hero-sm.jpg') left top no-repeat;
     }
 }
 
 @media (min-width: em(768)) {
-    .jumbotron {
+    .jumbotron, .nav-auxBar {
         background: url('../img/hero-tb.jpg') left top no-repeat;
     }
     .page-appMain .jumbotron { text-align: left; }
 }
 
 @media (min-width: em(960)) {
-    .jumbotron {
+    .jumbotron, .nav-auxBar {
         text-align: left;
     }
 }
 
 @media (min-width: em(1200)) {
-    .jumbotron {
+    .jumbotron, .nav-auxBar {
         background: url('../img/hero-dk.png') center top no-repeat;
     }
 }
@@ -463,16 +463,42 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $color-primaryLight;
   }
 
-  // Sidebars
-  
-
   // Jumbotron
-  .jumbotron {
+  .nav-auxBar {
     padding: 0.25em 0;
     background-position: center;
-    p { 
-      font-size: 0.75em; 
+    font-size: 0.85em;
+    line-height: 150%;
+    .stateOperation {
       margin-bottom: 0;
+      float: left;
+    }
+    .aux {
+      float: right;
+      a {
+        margin-left: 1em;
+        color: $color-blue-dark;
+      }
+    }
+    .shortform { display: none; }
+  }
+
+  @media (max-width: em(600)) {
+    .nav-auxBar {
+      .longform { display: none; }
+      .shortform { display: inline; }
+    }
+  }
+
+  @media (max-width: em(480)) {
+    .nav-auxBar {
+      .aux, .stateOperation, .stateOperation * {
+        float: none;
+      }
+      .aux { display: none; }
+      .stateOperation b span {
+        font-weight: normal;
+      }
     }
   }
 
