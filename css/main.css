@@ -1,8 +1,8 @@
 /*!
  *
- *	SOLAR Styling
- * 	Initially created by Coty Beasley @beacrea
- *	Email: cdbeasley@naic.org
+ *  SOLAR Styling
+ *  Initially created by Coty Beasley @beacrea
+ *  Email: cdbeasley@naic.org
  *  
  *  NOTE: 
  *  This stylesheet is built using SASS.
@@ -17,7 +17,7 @@
  *
  * -------------------------------------------
  *
- *	$_VARIABLES
+ *  $_VARIABLES
  *    - Colors
  *    - Fonts
  *    - Math
@@ -25,7 +25,7 @@
  *  $_MIXINS
  *    - Px -> EM Conversion
  *
- *	$_GlOBAL STYLES
+ *  $_GlOBAL STYLES
  *    - Body
  *    - Typography
  *    - Content-Bounding
@@ -33,7 +33,7 @@
  *    - Buttons
  *    - Footer
  *
- *	$_TYPOGRAPHY
+ *  $_TYPOGRAPHY
  *    - Defaults
  *
  *  $_FORMS

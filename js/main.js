@@ -13,6 +13,9 @@
  *	$_CONTENT COMPONENTS
  *		- News Ticker
  *
+ *  $_NAVIGATION TABLE
+ *      - Application Content Loader
+ *
  *	$_STATE INFORMATION
  *		- State Listing
  *		- State Contact Information
@@ -43,6 +46,44 @@ setInterval(function() {
         ticker.children(':first').fadeIn(800);
     });
 },4500);
+
+
+
+
+
+/*
+ * -------------------------------------------
+ *  $_NAVIGATION TABLE
+ * -------------------------------------------
+ */
+
+// Application Content Loader
+
+var appContentPath = 'modules/';
+var appContentRouter =  
+{  
+    nav_aux : {
+        modulePath: appContentPath + 'nav-aux.html',
+        trigger: {
+            tasks: appContentPath + 'content-tasks.html',
+            messages: appContentPath + 'content-messages.html',
+            licenseeSearch: appContentPath + 'content-search_licensee.html'
+        }
+    }
+
+};
+
+// Auxilary Navigation Loaders
+
+$('.nav-auxBar a').click(function (event) {
+    if ($(this).hasClass('triggerView-tasks')) {
+        $("#test").load(appContentRouter.nav_aux.trigger.tasks);
+    } else if ($(this).hasClass('triggerView-messages')) {
+        $("#test").load(appContentRouter.nav_aux.trigger.messages);
+    } else if ($(this).hasClass('triggerView-search_licensee')) {
+        $("#test").load(appContentRouter.nav_aux.trigger.licenseeSearch);
+    }
+});
 
 
 

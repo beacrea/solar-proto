@@ -1,8 +1,8 @@
 /*!
  *
- *	SOLAR Styling
- * 	Initially created by Coty Beasley @beacrea
- *	Email: cdbeasley@naic.org
+ *  SOLAR Styling
+ *  Initially created by Coty Beasley @beacrea
+ *  Email: cdbeasley@naic.org
  *  
  *  NOTE: 
  *  This stylesheet is built using SASS.
@@ -17,7 +17,7 @@
  *
  * -------------------------------------------
  *
- *	$_VARIABLES
+ *  $_VARIABLES
  *    - Colors
  *    - Fonts
  *    - Math
@@ -25,7 +25,7 @@
  *  $_MIXINS
  *    - Px -> EM Conversion
  *
- *	$_GlOBAL STYLES
+ *  $_GlOBAL STYLES
  *    - Body
  *    - Typography
  *    - Content-Bounding
@@ -33,7 +33,7 @@
  *    - Buttons
  *    - Footer
  *
- *	$_TYPOGRAPHY
+ *  $_TYPOGRAPHY
  *    - Defaults
  *
  *  $_FORMS
@@ -115,17 +115,17 @@ $browser-context: 16;
 
 // Body Styles
 html, body {
-    // Font Defaults
-    font: 16px $font-stack;
-    color: $color-primaryDark;
-    font-weight: 300;
+  // Font Defaults
+  font: 16px $font-stack;
+  color: $color-primaryDark;
+  font-weight: 300;
 
-    // Container Control
-    height: 100%;
-    width: 100%;
-    
-    // Background Styles
-    background: $color-offWhite;
+  // Container Control
+  height: 100%;
+  width: 100%;
+  
+  // Background Styles
+  background: $color-offWhite;
 }
 
 // Typography
@@ -214,75 +214,75 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 6px solid $color-blue;
     
     .copyright {
-        float:left;
-        p {
-            margin: 0;
-            color: #666;
-            font-size: 0.75em;
-            
-            &:first-child {
-                margin-bottom: 0.5em;
-            }
-        }
+      float:left;
+      p {
+          margin: 0;
+          color: #666;
+          font-size: 0.75em;
+          
+          &:first-child {
+              margin-bottom: 0.5em;
+          }
+      }
     }
 
     .socialLinks {
-        float:right;
-        text-align: right;
-        margin-top: 0.25em;
-        a:hover {
-          text-decoration: none;
-        }
-        img {
-            width: 2em;
-            height: auto;
-            margin-left: 0.25em; 
-        }
+      float:right;
+      text-align: right;
+      margin-top: 0.25em;
+      a:hover {
+        text-decoration: none;
+      }
+      img {
+          width: 2em;
+          height: auto;
+          margin-left: 0.25em; 
+      }
     }
 
     .globalLinks {
-        clear:both;
-        border-top: 1px solid #ccc;
-        margin-top: 3em !important;
-        padding-top: 0.5em;
-        a, span {
-            margin-right: 0.25em
-        }
-        a {
-            font-size: 0.9em
-        }
+      clear:both;
+      border-top: 1px solid #ccc;
+      margin-top: 3em !important;
+      padding-top: 0.5em;
+      a, span {
+          margin-right: 0.25em
+      }
+      a {
+          font-size: 0.9em
+      }
     }
 }
 
 @media (max-width: em(500)) {
     .footerCap {
-        padding-bottom: 1em;
-        
-        .copyright, .socialLinks {
-            display: block;
-            float: none;
-            text-align: center;
-            margin-top: 1em;
-        }
-        
-        .socialLinks {
-            img { 
-              margin-left: 0.25em;
-              margin-right: 0.25em;
-              width: 2.5em;
-              height: auto;
-              border: none !important;
-            }
-        }
-        
-        .globalLinks {
-            margin-top: 0.5em !important;
-            padding-top: 0.5em;
-            text-align: center;
-            a, span {
-                margin: 0 0.25em
-            }
-        }
+      padding-bottom: 1em;
+      
+      .copyright, .socialLinks {
+        display: block;
+        float: none;
+        text-align: center;
+        margin-top: 1em;
+      }
+      
+      .socialLinks {
+          img { 
+            margin-left: 0.25em;
+            margin-right: 0.25em;
+            width: 2.5em;
+            height: auto;
+            border: none !important;
+          }
+      }
+      
+      .globalLinks {
+          margin-top: 0.5em !important;
+          padding-top: 0.5em;
+          text-align: center;
+          a, span {
+              margin: 0 0.25em
+          }
+      }
     }
 }
 
@@ -369,13 +369,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: em(960)) {
     .jumbotron, .nav-auxBar {
-        text-align: left;
+      text-align: left;
     }
 }
 
 @media (min-width: em(1200)) {
     .jumbotron, .nav-auxBar {
-        background: url('../img/hero-dk.png') center top no-repeat;
+      background: url('../img/hero-dk.png') center top no-repeat;
     }
 }
 
