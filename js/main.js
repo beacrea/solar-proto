@@ -60,7 +60,7 @@ setInterval(function() {
 // Application Content Loader
 
 var appContentPath = 'modules/';
-var appContentRouter =  
+var router =  
 {  
     nav_aux : {
         modulePath: appContentPath + 'nav-aux.html',
@@ -76,12 +76,13 @@ var appContentRouter =
 // Auxilary Navigation Loaders
 
 $('.nav-auxBar a').click(function (event) {
+    var wrapper = $("#test");
     if ($(this).hasClass('triggerView-tasks')) {
-        $("#test").load(appContentRouter.nav_aux.trigger.tasks);
+        wrapper.load(router.nav_aux.trigger.tasks);
     } else if ($(this).hasClass('triggerView-messages')) {
-        $("#test").load(appContentRouter.nav_aux.trigger.messages);
+        wrapper.load(router.nav_aux.trigger.messages);
     } else if ($(this).hasClass('triggerView-search_licensee')) {
-        $("#test").load(appContentRouter.nav_aux.trigger.licenseeSearch);
+        wrapper.load(router.nav_aux.trigger.licenseeSearch);
     }
 });
 
