@@ -67,7 +67,7 @@ var router =
         trigger: {
             tasks: appContentPath + 'content-tasks.html',
             messages: appContentPath + 'content-messages.html',
-            licenseeSearch: appContentPath + 'content-search_licensee.html'
+            search_licensee: appContentPath + 'content-search_licensee.html'
         }
     }
 
@@ -75,14 +75,22 @@ var router =
 
 // Auxilary Navigation Loaders
 
+var wrapper = $(".contentWrapper");
+var contentFade = function (triggerClass) {
+    wrapper.hide();
+    wrapper.load(router.nav_aux.trigger[triggerClass]);
+    wrapper.fadeIn(400); 
+};
+
+wrapper.load(router.nav_aux.trigger.tasks);
+
 $('.nav-auxBar a').click(function (event) {
-    var wrapper = $("#test");
     if ($(this).hasClass('triggerView-tasks')) {
-        wrapper.load(router.nav_aux.trigger.tasks);
+        contentFade('tasks');
     } else if ($(this).hasClass('triggerView-messages')) {
-        wrapper.load(router.nav_aux.trigger.messages);
+        contentFade('messages');
     } else if ($(this).hasClass('triggerView-search_licensee')) {
-        wrapper.load(router.nav_aux.trigger.licenseeSearch);
+        contentFade('search_licensee');
     }
 });
 

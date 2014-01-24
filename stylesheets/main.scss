@@ -48,8 +48,8 @@
  *  $_APPLICATION MAIN
  *    - Baseline
  *
- *  $PAGE SPECIFIC
- *    - Landing Page
+ *  $_LANDING PAGE
+ *    - Landing Styles
  *  
  *  $_HELPERS / PLUGINS
  *    - Modals
@@ -131,6 +131,70 @@ html, body {
 // Typography
 h1, h2, h3, h4, h5, h6 {
   font-family: Georgia, sans-serif !important;
+}
+
+// Tables
+/* Table styles */
+table {
+  width: 100%;
+  font-size: 0.75em;
+}
+thead th {
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc;
+  color: #888;
+}
+th, td {
+   padding: .5em 1em;
+  background-color: #fff;
+  text-align: right;
+}
+th:first-child, 
+td:first-child {
+   text-align: left;
+}
+tbody th, td {
+  border-bottom: 1px solid #e6e6e6;
+}
+.co-name {
+   display: block;
+   font-size: .9em;
+   opacity: .4;
+}
+
+.enhanced th,
+.enhanced td {
+   display: none;
+}
+
+.legacy-ie .enhanced th.essential, 
+.legacy-ie .enhanced td.essential {
+  display: inline;
+}
+.enhanced th.essential, 
+.enhanced td.essential {
+   display: table-cell;
+}
+@media screen and (min-width: 500px) {
+  .legacy-ie .enhanced th.optional, 
+  .legacy-ie .enhanced td.optional {
+    display: inline;
+  }
+  .enhanced th.optional, 
+  .enhanced td.optional {
+    display: table-cell;
+  }
+}
+
+@media screen and (min-width: 800px) {
+   .legacy-ie .enhanced th, 
+   .legacy-ie .enhanced td {
+      display: inline;
+   }
+   .enhanced th, 
+   .enhanced td {
+      display: table-cell;
+   }
 }
 
 // Site-Bounding
@@ -457,6 +521,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
   }
 
+  // Containers
+  .page-content { 
+    padding-top: 1em;
+    padding-bottom: 4em;
+  }
+
   // Navigation
   .nav-wrapper {
     position: relative;
@@ -504,9 +574,19 @@ h1, h2, h3, h4, h5, h6 {
 
   // Main Content
   .page-content {
-    min-height: 29em;
+    min-height: 25em;
     background:  $color-primaryLight;
+    h1 .glyphicon { font-size: 0.5em; }
   }
+
+  // Tasks
+  .taskWrapper {
+    overflow: hidden;
+    .table-scroll {
+      overflow-x: scroll;
+    }
+  }
+
 }
 
 
@@ -515,9 +595,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /*
  * -------------------------------------------
- *  $_PAGE SPECIFIC
+ *  $_LANDING PAGE
  *  
- *  Styles that are unique to each page.
+ *  Styles that are unique to the lander.
  * -------------------------------------------
  */
 
