@@ -468,6 +468,16 @@ h1, h2, h3, h4, h5, h6 {
 .page-appMain .sheet-site {
   margin-bottom: 0;
 }
+.page-appMain h1, .page-appMain h2, .page-appMain h3, .page-appMain h4 {
+  color: #0f6496;
+}
+.page-appMain h1 .glyphicon {
+  font-size: 0.5em;
+  padding-right: 0.33em;
+}
+.page-appMain h1 {
+  font-size: 1.75em;
+}
 .page-appMain .page-content {
   padding-top: 1em;
   padding-bottom: 4em;
@@ -519,14 +529,27 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 25em;
   background: white;
 }
-.page-appMain .page-content h1 .glyphicon {
-  font-size: 0.5em;
-}
 .page-appMain .taskWrapper {
   overflow: hidden;
 }
 .page-appMain .taskWrapper .table-scroll {
   overflow-x: scroll;
+}
+.page-appMain .wrapper-messages-sys > h1,
+.page-appMain .wrapper-messages-mail > h1 {
+  border-bottom: 1px solid #0f6496;
+  padding-bottom: 0.25em;
+}
+.page-appMain .wrapper-messages-sys .message h1,
+.page-appMain .wrapper-messages-mail .message h1 {
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif !important;
+  margin-bottom: 0.2em;
+}
+.page-appMain .wrapper-messages-sys .message time,
+.page-appMain .wrapper-messages-mail .message time {
+  margin-bottom: 0.25em;
+  font-style: italic;
 }
 .page-appMain .sbsServiceWrapper ul {
   list-style: none;

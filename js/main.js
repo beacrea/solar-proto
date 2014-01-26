@@ -82,7 +82,7 @@ var contentFade = function (triggerClass) {
     wrapper.fadeIn(400); 
 };
 
-wrapper.load(router.nav_aux.trigger.tasks);
+wrapper.load(router.nav_aux.trigger.messages);
 
 $('.nav-auxBar a').click(function (event) {
     if ($(this).hasClass('triggerView-tasks')) {

@@ -520,6 +520,11 @@ h1, h2, h3, h4, h5, h6 {
   .sheet-site {
     margin-bottom: 0;
   }
+  
+  // Typography
+  h1, h2, h3, h4 { color: $color-blue; }
+  h1 .glyphicon { font-size: 0.5em; padding-right: 0.33em; }
+  h1 { font-size: 1.75em; }
 
   // Containers
   .page-content { 
@@ -576,7 +581,6 @@ h1, h2, h3, h4, h5, h6 {
   .page-content {
     min-height: 25em;
     background:  $color-primaryLight;
-    h1 .glyphicon { font-size: 0.5em; }
   }
 
   // Tasks
@@ -584,6 +588,26 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     .table-scroll {
       overflow-x: scroll;
+    }
+  }
+
+  // Messages
+  .wrapper-messages-sys, 
+  .wrapper-messages-mail {
+    & > h1 { 
+      border-bottom: 1px solid $color-blue;
+      padding-bottom: 0.25em;
+    }
+    .message {
+      h1 { 
+        font-size: 1em;
+        font-family: $font-stack !important;
+        margin-bottom: 0.2em;
+      }
+      time { 
+        margin-bottom: 0.25em;
+        font-style: italic;
+      }
     }
   }
 
@@ -595,7 +619,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
   }
   .nav-category {
-    & > a { background: darken($color-primaryLight, 10%); margin: 0.1em 0; }
+    & > a { 
+      background: darken($color-primaryLight, 10%);
+      margin: 0.1em 0;
+    }
     margin: 0.25em 0;
     & > a > ul { margin-left: 0.5em; }
     li, ul { clear: both; }
@@ -610,7 +637,6 @@ h1, h2, h3, h4, h5, h6 {
     }
   } 
   & > a { margin-left: 0; }
-  .btn {  }
  }
 
 }
