@@ -558,17 +558,17 @@ h1, h2, h3, h4, h5, h6 {
     .shortform { display: none; }
   }
 
-  @media (max-width: em(600)) {
+  @media (max-width: em(990)) {
     .nav-auxBar {
       .longform { display: none; }
       .shortform { display: inline; }
     }
   }
 
-  @media (max-width: em(480)) {
+  @media (max-width: em(650)) {
     .nav-auxBar {
       .aux, .stateOperation, .stateOperation * {
-        float: none;
+          float: none;
       }
       .aux { display: none; }
       .stateOperation b span {
@@ -576,6 +576,7 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+  
 
   // Main Content
   .page-content {

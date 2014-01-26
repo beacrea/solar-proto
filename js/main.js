@@ -67,6 +67,7 @@ var router =
         trigger: {
             tasks: appContentPath + 'content-tasks.html',
             messages: appContentPath + 'content-messages.html',
+            reports: appContentPath + 'content-reports.html',
             search_licensee: appContentPath + 'content-search_licensee.html'
         }
     }
@@ -79,7 +80,7 @@ var wrapper = $(".contentWrapper");
 var contentFade = function (triggerClass) {
     wrapper.hide();
     wrapper.load(router.nav_aux.trigger[triggerClass]);
-    wrapper.fadeIn(400); 
+    wrapper.fadeIn(400);
 };
 
 wrapper.load(router.nav_aux.trigger.messages);
@@ -89,7 +90,9 @@ $('.nav-auxBar a').click(function (event) {
         contentFade('tasks');
     } else if ($(this).hasClass('triggerView-messages')) {
         contentFade('messages');
-    } else if ($(this).hasClass('triggerView-search_licensee')) {
+    } else if ($(this).hasClass('triggerView-reports')) {
+        contentFade('reports');
+    }else if ($(this).hasClass('triggerView-search_licensee')) {
         contentFade('search_licensee');
     }
 });

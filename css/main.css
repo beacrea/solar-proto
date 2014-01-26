@@ -506,7 +506,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-appMain .nav-auxBar .shortform {
   display: none;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 61.875em) {
   .page-appMain .nav-auxBar .longform {
     display: none;
   }
@@ -514,7 +514,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline;
   }
 }
-@media (max-width: 30em) {
+@media (max-width: 40.625em) {
   .page-appMain .nav-auxBar .aux, .page-appMain .nav-auxBar .stateOperation, .page-appMain .nav-auxBar .stateOperation * {
     float: none;
   }
