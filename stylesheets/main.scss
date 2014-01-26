@@ -121,8 +121,7 @@ html, body {
   font-weight: 300;
 
   // Container Control
-  height: 100%;
-  width: 100%;
+  overflow-x: hidden;
   
   // Background Styles
   background: $color-offWhite;
@@ -145,7 +144,7 @@ thead th {
   color: #888;
 }
 th, td {
-   padding: .5em 1em;
+  padding: .5em 1em;
   background-color: #fff;
   text-align: right;
 }
@@ -201,6 +200,7 @@ tbody th, td {
 .sheet-site {
   min-width: em(318); 
   margin-bottom: 2em;
+  position: relative;
 }
 
 // Navigation
@@ -587,6 +587,32 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  // SBS Service Nav
+  .sbsServiceWrapper {
+  ul {
+    list-style: none;
+    padding: 0;
+    height: 100%;
+  }
+  .nav-category {
+    & > a { background: darken($color-primaryLight, 10%); margin: 0.1em 0; }
+    margin: 0.25em 0;
+    & > a > ul { margin-left: 0.5em; }
+    li, ul { clear: both; }
+    a { 
+      color: $color-blue;
+      float: left;
+      width: 100%;
+      padding: 0.1em; 
+    }
+    ul { 
+      margin-left: 1em; 
+    }
+  } 
+  & > a { margin-left: 0; }
+  .btn {  }
+ }
+
 }
 
 
@@ -655,7 +681,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .qTools-miniApp {
-  background: url('../img/SBS_Logo-tile-light.png') #fff center center fixed;
+  background: url('../img/SBS_Logo-tile-light.png') #fff center fixed;
   border-top: 4px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 4em 0;
