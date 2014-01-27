@@ -116,8 +116,6 @@ wrapper.load(router.nav.trigger.tasks, function() {
             // append each toggle to the container
             container.find("ul").append(toggle);
             toggle.find("input")
-
-                // when the checkbox is toggled
                 .change(function(){
                     var input = $(this),
                         val = input.val(),  // this equals the header's ID, i.e. "company"
@@ -126,15 +124,12 @@ wrapper.load(router.nav.trigger.tasks, function() {
                     if (input.is(":checked")) {cols.show();}
                     else {cols.hide();};
                 })
-
-                // custom event that sets the checked state for each toggle based on column visibility, which is controlled by @media rules in the CSS
-                // called whenever the window is resized or reoriented (mobile)
                 .bind("updateCheck", function(){
                     if ( th.css("display") ==  "table-cell") {
-                        $(this).attr("checked", true);
+                        $(this).prop('checked', true);
                     }
                     else {
-                        $(this).attr("checked", false);
+                        $(this).prop('checked', false);
                     };
                 })
 
