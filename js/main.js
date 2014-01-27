@@ -172,7 +172,7 @@ $('a, .btn').click(function (event) {
     } 
 });
 
-$('.panelbar a').not('.nav-category > a').addClass('triggerView-reports');
+$('.panelbar a').not('.nav-category > a').addClass('triggerView-search_licensee');
 $('.panelbar a').removeAttr("href").css('cursor', 'pointer');
 
 // SBS Service Naviation
