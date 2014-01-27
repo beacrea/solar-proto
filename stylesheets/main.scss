@@ -196,6 +196,32 @@ tbody th, td {
    }
 }
 
+.table-menu-wrapper {
+  position: absolute;
+  top: 2em;
+  right: 0;
+}
+
+.table-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1.2em;
+  width: 12em;
+}
+.table-menu-hidden {
+  left: -999em;
+  right: auto;
+}
+
+.table-wrapper {
+  position: relative;
+  margin: 5em 5%;
+}
+
 // Site-Bounding
 .sheet-site {
   margin-bottom: 2em;
