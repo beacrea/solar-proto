@@ -1,19 +1,25 @@
-
-body{
-    /* background: #00589F; <-- Blue fo' NAIC */
-    background: #ffffff;
-    color: black;
+body {
+    background: #00589F;
+    color: white;
     font-size: 16px;
 }
 
-.well{
-    height: 250px;
+.contact-group {
+    margin-bottom: 5px; 
+}
+
+input[type="submit"], button[type="submit"]{
+    -webkit-appearance:none;
+    -webkit-border-radius:0;    
 }
 
 .absCenter {
     margin: auto;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .absCenter.is-Responsive {
@@ -23,7 +29,7 @@ body{
     max-width: 400px;
 }
 
-#logo-container img{
+#logo-container img {
     margin: auto;
     display: block;
     padding-bottom: 1em;
@@ -32,15 +38,84 @@ body{
     max-width: 200px;
     max-height: 100%;
 }
-.logo-nipr { padding-left: 2%; padding-right: 6%; } /* visual eye-hack */
 
-.checkbox { font-size: 0.85em; }
-.footer { text-align: center; font-style: italic; font-size: 0.75em; font-weight: 300; }
+.checkbox {
+    font-size: 0.85em;
+}
 
-a, a:active, a:visited, a:hover { text-decoration: none; }
-a, a:active, a:visited { color: black; border-bottom: 1px dotted #62c0ff; }
-a:hover, a:focus { color: #62c0ff; }
+.footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.75em;
+    font-weight: 300;
+}
 
-.btn { background: #000; color: #fff; font-weight: bold; font-size: 1.5em; letter-spacing: 0.03em; padding: 0.1em; }
-.btn:hover { background: #333; color: #fff; }
+.support{
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 300;
+}
 
+a,a:active,a:visited,a:hover {
+    text-decoration: none;
+}
+
+a,a:active,a:visited {
+    color: white;
+    border-bottom: 1px dotted #62c0ff;
+}
+
+a:hover,a:focus {
+    color: #62c0ff;
+}
+
+.btn {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    letter-spacing: 0.03em;
+    padding: 0.1em;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.modal-header{
+    background: #000;
+    color: #fff;
+}
+
+.modal-body{
+    color: #000;
+    overflow-y: auto;
+    height: 200px;
+}
+
+.close{
+    color: #fff;
+    opacity: 0.5;
+}
+
+.navbar-default {
+    background: #00589F;
+}
+
+.navbar-brand{
+     padding: 25px;
+     margin-left: 10px; 
+}
+
+@media screen and (min-width:768px){
+.navbar-brand { width:220px; height:29px; background:url(images/naic_header_logo_220x29.png) no-repeat left center;}
+}
+
+@media screen and (max-width: 767px){
+.navbar-brand { width:220px; height:29px; background:url(images/naic_header_logo_220x29.png) no-repeat left center; }
+}
+
+@media screen and (max-width: 480px){
+.navbar-brand { width:80px; height:29px; background:url(images/naic_header_logo_80x29.png) no-repeat left center; }
+}
