@@ -37,7 +37,7 @@
               <div class="container">
                   <nav class="navbar navbar-default navbar-primary" role="navigation">
                       <!-- Brand and toggle get grouped for better mobile display -->
-                      <button type="button" class="btn btn-default navbar-btn pull-right navbar-login"><span class="glyphicon glyphicon-user"></span>Account</button>
+                      <button type="button" class="btn btn-default navbar-btn pull-right navbar-login triggerView-account"><span class="glyphicon glyphicon-user"></span>Account</button>
                       <div class="navbar-header">
                           <button type="button" class="navbar-toggle navbar-btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                               <span class="glyphicon glyphicon glyphicon-list"></span>
@@ -72,10 +72,10 @@
                 <span class="visible-xs">State: <b>Missouri</b></span>
               </p>
               <nav class="aux">
-                <a href="#tasks" class="triggerView-tasks"><span class="longform">Your Tasks</span><span class="shortform">Tasks</span></a>
-                <a href="#messages" class="triggerView-messages">Messages(10)</a>
-                <a href="#reports" class="triggerView-reports">Reporting</a>
-                <a href="#search-licensee" class="triggerView-search_licensee">Licensee Search</a>
+                <a class="triggerView-tasks"><span class="longform">Your Tasks</span><span class="shortform">Tasks</span></a>
+                <a class="triggerView-messages">Messages(10)</a>
+                <a class="triggerView-reports">Reporting</a>
+                <a class="triggerView-search_licensee">Licensee Search</a>
               </nav><!-- /.aux -->
             </div>
           </div>
@@ -83,8 +83,9 @@
           <div class="page-content">
             <div class="container">
               <div class="row">
-                <div class="col-xs-12 col-md-3">
-                  <nav class="sbsServiceWrapper">
+                <div class="col-xs-12 col-md-9 contentWrapper clearfix pull-right"></div><!-- /.col -->
+                <div class="col-xs-12 col-md-3 pull-left">
+                  <nav class="sbsServiceWrapper clearfix">
                   <h1><span class="glyphicon glyphicon-th"></span>SBS Services</h1>
                     <ul class="panelbar" data-role="panelbar">
                       <li class="nav-category"><a href="#">Administration</a>
@@ -752,7 +753,6 @@
                     </ul>
                   </nav>
                 </div><!-- /.col -->
-                <div class="col-xs-12 col-md-9 contentWrapper"></div><!-- /.col -->
               </div><!-- /.row -->
             </div><!-- /.container -->
           </div><!-- /.page-content -->

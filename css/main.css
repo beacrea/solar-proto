@@ -160,7 +160,6 @@ tbody th, td {
   }
 }
 .sheet-site {
-  min-width: 19.875em;
   margin-bottom: 2em;
   position: relative;
 }
@@ -367,6 +366,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 2em;
   border-bottom: 1px solid #ccc;
 }
+.jumbotron a, .nav-auxBar a {
+  cursor: pointer;
+}
 .jumbotron h1, .nav-auxBar h1 {
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -467,6 +469,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 .page-appMain .sheet-site {
   margin-bottom: 0;
+  min-width: 19.875em;
 }
 .page-appMain h1, .page-appMain h2, .page-appMain h3, .page-appMain h4 {
   color: #0f6496;
@@ -551,6 +554,19 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.25em;
   font-style: italic;
 }
+.page-appMain .wrapper-search_licensee .form-group {
+  margin: 0;
+}
+.page-appMain .wrapper-search_licensee .form-group label {
+  margin: 0.25em 0;
+}
+.page-appMain .wrapper-search_licensee .row {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.page-appMain .sbsServiceWrapper {
+  margin-bottom: 1em;
+}
 .page-appMain .sbsServiceWrapper ul {
   list-style: none;
   padding: 0;
@@ -580,6 +596,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 .page-appMain .sbsServiceWrapper > a {
   margin-left: 0;
+}
+.page-appMain .categoryHead {
+  background: #15354a;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+}
+.page-appMain .data-title {
+  display: block;
+  font-size: 1.1em;
+  color: #333;
+  margin-top: 0.65em;
+}
+.page-appMain .dataCard {
+  padding: 0.75em 1em 1.5em;
+  margin-bottom: 2em;
+  line-height: 150%;
+  color: #666;
+}
+.page-appMain .profile-user-name {
+  font-size: 2em;
+  line-height: 150%;
+  color: #444;
+}
+.page-appMain .profile-admin {
+  margin-bottom: 2em;
+  border: 1px solid #1f80c1;
+}
+.page-appMain .profile-admin .categoryHead {
+  background: #1f80c1;
+  color: #fff;
+}
+.page-appMain .profile-dataCard {
+  margin-bottom: 0;
+}
+.page-appMain .profile-admin .data-title {
+  color: #1f80c1;
+}
+.page-appMain .profile-user-passwordField {
+  display: inline-block;
+  border: 0;
+  padding: 0.5em;
+  background: #f99600;
+  color: #fff;
+}
+.page-appMain .toggle-wrapper, .page-appMain .profile-user-passwordField {
+  margin-top: 0.5em;
+}
+.page-appMain .user_data {
+  display: block;
 }
 
 /*

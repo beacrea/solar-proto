@@ -1,10 +1,79 @@
-<h1><span class="glyphicon glyphicon-search"></span>Licensee Search</h1>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
+<div class="wrapper-search_licensee">
+	<h1><span class="glyphicon glyphicon-search"></span>Licensee Quick Search</h1>
+	<p>This is some instruction text to help the user.</p>
+	<div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+	<h1><span class="glyphicon glyphicon-search"></span>Advanced Search</h1>
+	<p>This is some instruction text to help the user.</p>
+	
+	<form class="form-horizontal">
+		<fieldset>
+			<div class="row">
+			  <div class="col-sm-6">
+				<label class="control-label" for="radios">Entity Type</label>
+				<div class="radio">
+					<label for="radios-0"><input checked="checked" id="radios-0" name="radios" type="radio" value="1"> Individual</label>	
+				</div><!-- /.radio -->
+				<div class="radio">
+					<label for="radios-1"><input id="radios-1" name="radios" type="radio"value="2"> Business Entity</label>
+				</div><!-- /.radio -->
+			  </div><!-- /.col -->
+			  <div class="col-sm-6">
+				<label class="control-label" for="radios">Residency</label>
+				<div class="radio">
+					<label for="radios-0"><input checked="checked" id="radios-0" name="radios" type="radio" value="1"> Yes</label>	
+				</div><!-- /.radio -->
+				<div class="radio">
+					<label for="radios-1"><input id="radios-1" name="radios" type="radio"value="2"> No</label>
+				</div><!-- /.radio -->
+			  </div><!-- /.col -->
+			</div><!-- /.row -->
+
+			<!-- Select Basic -->
+			<div class="row">
+				<div class="form-group col-xs-12">
+				  <label class="control-label" for="selectbasic">License Type</label>
+				  <div class="">
+				    <select id="selectbasic" name="selectbasic" class="form-control">
+				      <option value="1">-- select one --</option>
+				      <option value="2">ADJUSTER</option>
+				      <option value="">APPRAISER</option>
+				      <option value="">APPRENTICE ADJUSTER</option>
+				      <option value="">APPRENTICE APPRAISER</option>
+				      <option value="">FRATERNAL PRODUCER</option>
+				      <option value="">LIMITED LINES PRODUCER</option>
+				      <option value="">MISC LTD LINES PRODUCER</option>
+				      <option value="">PRODUCER</option>
+				      <option value="">PUBLIC ADJUSTER</option>
+				      <option value="">SURPLUS LINES BROKER</option>
+				      <option value="">TEMP PRODUCER</option>
+				    </select>
+				  </div>
+				</div>
+			</div><!-- /.row -->
+
+			<div class="row">
+			  <div class="col-sm-4">
+			    <label class="control-label" for="textinput">First Name</label>
+			  	<input id="textinput" name="textinput" type="text" placeholder="First Name" class="form-control">
+			  </div>
+			  <div class="col-sm-4">
+			    <label class="control-label" for="textinput">Last Name</label>
+			  	<input id="textinput" name="textinput" type="text" placeholder="Last Name" class="form-control">
+			  </div>
+			  <div class="col-sm-4">
+			    <label class="control-label" for="textinput">SSN/FEIN</label>
+			  	<input id="textinput" name="textinput" type="text" placeholder="SSN/FEIN" class="form-control">
+			  </div>
+			</div><!-- /.row -->
+
+		</fieldset>
+	</form>
+
+	<button type="button" class="btn btn-primary btn-lg btn-block btn-gold ui-element wizard-btn-next generate-report">Search</button>
+
+</div><!-- /.wrapper-search_licensee -->

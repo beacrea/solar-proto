@@ -1,10 +1,31 @@
-<h1><span class="glyphicon glyphicon-list-alt"></span>Reporting Center</h1>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
-<p>Search Results!!</p>
+<div class="wrapper-reports">
+	<h1><span class="glyphicon glyphicon-list-alt"></span>Reporting Center</h1>
+	<p>This section will include both recent reports as well as the ability to construct new ones.</p>
+
+	<div class="report-type form-group">
+		<span class="data-title wizard-title-primary">Choose Report Type</span>
+		<select class="form-control" id="report-select">
+			<option selected="selected">Choose Report Type</option>
+			
+				<option>User List Report</option>
+			
+				<option>Users By Access Assignment Report</option>
+			
+				<option>Access Assignment by User Report</option>
+			
+		</select>                               	
+	</div>
+	<div class="report-passExpDate">
+		<span class="data-title wizard-title-primary">Add Password Expiration Date Info?</span>
+		<select id="password-expiry-option" class="form-control">
+		  <option>No</option>
+		  <option>Yes</option>
+		</select>                               	
+	</div>
+	<div class="well report-filtersAndFormats">
+		<span class="data-title">Access Assignment Filter: <span class="highlight-blue-lighter">All Access Assignments</span></span>
+		<span class="data-title">User Filter: <span class="highlight-blue-lighter">All Users</span></span>    
+		<span class="data-title">Report Format: <span class="highlight-blue-lighter">Microsoft Excel</span></span>                                  	
+	</div>
+	<button type="button" class="btn btn-primary btn-lg btn-block btn-gold ui-element wizard-btn-next generate-report">Generate Report</button>
+</div><!-- /.wrapper-reports -->

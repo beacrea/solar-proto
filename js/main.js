@@ -62,39 +62,42 @@ setInterval(function() {
 var appContentPath = 'modules/';
 var router =  
 {  
-    nav_aux : {
+    nav : {
         modulePath: appContentPath + 'nav-aux.html',
         trigger: {
             tasks: appContentPath + 'content-tasks.html',
             messages: appContentPath + 'content-messages.html',
             reports: appContentPath + 'content-reports.html',
-            search_licensee: appContentPath + 'content-search_licensee.html'
+            search_licensee: appContentPath + 'content-search_licensee.html',
+            account: appContentPath + 'content-account.html'
         }
     }
 
 };
 
-// Auxilary Navigation Loaders
+// Navigation Loaders
 
 var wrapper = $(".contentWrapper");
 var contentFade = function (triggerClass) {
     wrapper.hide();
-    wrapper.load(router.nav_aux.trigger[triggerClass]);
+    wrapper.load(router.nav.trigger[triggerClass]);
     wrapper.fadeIn(400);
 };
 
-wrapper.load(router.nav_aux.trigger.messages);
+wrapper.load(router.nav.trigger.search_licensee);
 
-$('.nav-auxBar a').click(function (event) {
+$('a, .btn').click(function (event) {
     if ($(this).hasClass('triggerView-tasks')) {
         contentFade('tasks');
     } else if ($(this).hasClass('triggerView-messages')) {
         contentFade('messages');
     } else if ($(this).hasClass('triggerView-reports')) {
         contentFade('reports');
-    }else if ($(this).hasClass('triggerView-search_licensee')) {
+    } else if ($(this).hasClass('triggerView-search_licensee')) {
         contentFade('search_licensee');
-    }
+    } else if ($(this).hasClass('triggerView-account')) {
+        contentFade('account');
+    } 
 });
 
 // SBS Service Naviation

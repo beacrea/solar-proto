@@ -198,7 +198,6 @@ tbody th, td {
 
 // Site-Bounding
 .sheet-site {
-  min-width: em(318); 
   margin-bottom: 2em;
   position: relative;
 }
@@ -400,6 +399,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
     padding-top: 5em;
     padding-bottom: 2em;
+    a { cursor: pointer; }
     h1 {
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -519,6 +519,7 @@ h1, h2, h3, h4, h5, h6 {
   // Global Tweaks
   .sheet-site {
     margin-bottom: 0;
+    min-width: em(318); 
   }
   
   // Typography
@@ -612,36 +613,82 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  // Licensee Search
+  .wrapper-search_licensee {
+    .form-group {
+      margin: 0;
+      label { margin: 0.25em 0; }
+    }
+    .row {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  }
+
   // SBS Service Nav
   .sbsServiceWrapper {
-  ul {
-    list-style: none;
-    padding: 0;
-    height: 100%;
+    margin-bottom: 1em;
+    ul {
+      list-style: none;
+      padding: 0;
+      height: 100%;
+    }
+    .nav-category {
+      & > a { 
+        background: darken($color-primaryLight, 10%);
+        margin: 0.1em 0;
+      }
+      margin: 0.25em 0;
+      & > a > ul { margin-left: 0.5em; }
+      li, ul { clear: both; }
+      a { 
+        color: $color-blue;
+        float: left;
+        width: 100%;
+        padding: 0.1em; 
+      }
+      ul { 
+        margin-left: 1em; 
+      }
+    } 
+    & > a { margin-left: 0; }
   }
-  .nav-category {
-    & > a { 
-      background: darken($color-primaryLight, 10%);
-      margin: 0.1em 0;
-    }
-    margin: 0.25em 0;
-    & > a > ul { margin-left: 0.5em; }
-    li, ul { clear: both; }
-    a { 
-      color: $color-blue;
-      float: left;
-      width: 100%;
-      padding: 0.1em; 
-    }
-    ul { 
-      margin-left: 1em; 
-    }
-  } 
-  & > a { margin-left: 0; }
- }
 
-}
+  // Profile
+  .categoryHead {
+    background: $color-blue-dark;
+    color: $color-primaryLight;
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  .data-title {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 0.65em;
+  }
+  .dataCard { 
+    padding: 0.75em 1em 1.5em;
+    margin-bottom: 2em;
+    line-height: 150%;
+    color: #666;
+  }
+  .profile-user-name { font-size: 2em; line-height: 150%; color: #444; }
+  .profile-admin { margin-bottom: 2em; border: 1px solid rgb(31, 128, 193); }
+  .profile-admin .categoryHead { background: rgb(31, 128, 193); color: #fff; }
+  .profile-dataCard { margin-bottom: 0 }
+  .profile-admin .data-title { color: #1F80C1 }
+  .profile-user-passwordField { 
+    display: inline-block;
+    border: 0;
+    padding: 0.5em;
+    background: rgb(249,150,0);
+    color: #fff;
+  }
+  .toggle-wrapper, .profile-user-passwordField { margin-top: 0.5em; }
+  .user_data { display: block }
 
+} 
 
 
 
