@@ -87,7 +87,7 @@ var contentFade = function (triggerClass) {
 wrapper.load(router.nav.trigger.tasks, function() {
     var table = $('#tech-companies');
     table.addClass("enhanced");
-    var container = $('<div class="table-menu table-menu-hidden"><ul /></div>');
+    var container = $('<div class="table-menu table-menu-hidden"><ul></div>');
     $( ".taskWrapper thead th" ).each(function(i){
         var th = $(this),
             id = th.attr("id"),
@@ -141,8 +141,8 @@ wrapper.load(router.nav.trigger.tasks, function() {
 
     $(window).bind("orientationchange resize", function(){container.find("input").trigger("updateCheck");});
 
-    var menuWrapper = $('<div class="table-menu-wrapper" />'),
-        menuBtn = $('<a href="#" class="table-menu-btn">Display</a>');
+    var menuWrapper = $('<div class="table-menu-wrapper">'),
+        menuBtn = $('<a href="#" class="table-menu-btn btn btn-default">Display Specific Columns</a>');
 
     menuBtn.click(function(){
         container.toggleClass("table-menu-hidden");
@@ -150,7 +150,7 @@ wrapper.load(router.nav.trigger.tasks, function() {
     });
 
     menuWrapper.append(menuBtn).append(container);
-    table.before(menuWrapper);  // append the menu immediately before the table
+    $('.table-scroll').before(menuWrapper);  // append the menu immediately before the table
 
     // assign click-away-to-close event
     $(document).click(function(e){

@@ -174,7 +174,7 @@ tbody th, td {
 .enhanced td.essential {
    display: table-cell;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: em(500)) {
   .legacy-ie .enhanced th.optional, 
   .legacy-ie .enhanced td.optional {
     display: inline;
@@ -185,7 +185,7 @@ tbody th, td {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: em(800)) {
    .legacy-ie .enhanced th, 
    .legacy-ie .enhanced td {
       display: inline;
@@ -194,32 +194,6 @@ tbody th, td {
    .enhanced td {
       display: table-cell;
    }
-}
-
-.table-menu-wrapper {
-  position: absolute;
-  top: 2em;
-  right: 0;
-}
-
-.table-menu {
-  position: absolute;
-  right: 0;
-  left: auto;
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ccc;
-  font-size: 1.2em;
-  width: 12em;
-}
-.table-menu-hidden {
-  left: -999em;
-  right: auto;
-}
-
-.table-wrapper {
-  position: relative;
-  margin: 5em 5%;
 }
 
 // Site-Bounding
@@ -616,6 +590,60 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     .table-scroll {
       overflow-x: scroll;
+      position: relative;
+      padding-top: 1em;
+    }
+
+    .table-menu-wrapper {
+      position: relative;
+      margin-top: 0.5em;
+      text-align: right;
+    }
+
+    .table-menu {
+      text-align: left;
+      position: absolute;
+      right: 0;
+      left: auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      font-size: 1.2em;
+      width: auto;
+      max-width: 100%;
+      overflow: hidden;
+      padding: 1em;
+      z-index: 1000;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      label { font-weight: normal; }
+    }
+
+    @media screen and (max-width: em(500)) {
+      .table-scroll {
+        padding-top: 0;
+      }
+      .table-menu-wrapper {
+        right: inherit;
+        left: inherit;
+        position: relative;
+        width: 100%;
+        display: block;
+        margin: 0.75em 0 1em;
+        a { width: 100%; }
+      }
+    }
+
+    .table-menu-hidden {
+      left: -999em;
+      right: auto;
+    }
+
+    .table-wrapper {
+      position: relative;
+      margin: 5em 5%;
     }
   }
 
