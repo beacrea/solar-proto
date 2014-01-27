@@ -84,7 +84,7 @@ var contentFade = function (triggerClass) {
     wrapper.fadeIn(400);
 };
 
-wrapper.load(router.nav.trigger.search_licensee);
+wrapper.load(router.nav.trigger.tasks);
 
 $('a, .btn').click(function (event) {
     if ($(this).hasClass('triggerView-tasks')) {
