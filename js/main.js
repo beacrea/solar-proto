@@ -414,7 +414,7 @@ $(".listofStates").html(stateData);
 $(".state-contact").html(contactData);
 
 $('.qTools-miniApp, .qTool-app').hide();    
-$('.qTools-list a').click(function (event) {
+$('.qTools-list a[class*=qTool-trigger]').click(function (event) {
     $('.qTools-miniApp, .qTool-app').hide();
     if ($(event.target).is('.qTool-trigger-stateInfo')) {
         $('.qTool-app-stateInfo').show();
