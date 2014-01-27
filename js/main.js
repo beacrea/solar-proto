@@ -100,6 +100,8 @@ $('a, .btn').click(function (event) {
     } 
 });
 
+$('.panelbar a').not('.nav-category > a').addClass('triggerView-reports');
+
 // SBS Service Naviation
 
 $('.panelbar ul').hide();
